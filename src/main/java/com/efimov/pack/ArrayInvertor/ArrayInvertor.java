@@ -15,6 +15,7 @@ public class ArrayInvertor {
         Integer[] arrayInteger = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Double[] arrayDouble = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.10};
         String[] arrayString = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+        String[] arrayNull = null;
         /**
          * Inversion Array of integer
          */
@@ -22,8 +23,8 @@ public class ArrayInvertor {
         for (int anArray : arrayInteger) {
             System.out.print(" " + anArray);
         }
-        Invertor<Integer> invertor = new Invertor<Integer>(arrayInteger);
-        arrayInteger = invertor.reverseArray();
+        Invertor invertor = new Invertor();
+        invertor.reverseArray(arrayInteger);
         System.out.print("\nНаш массив после инвертации: ");
         for (int anArray : arrayInteger) {
             System.out.print(" " + anArray);
@@ -35,25 +36,29 @@ public class ArrayInvertor {
         for (double anArray2 : arrayDouble) {
             System.out.print(" " + anArray2);
         }
-        Invertor<Double> invertor2 = new Invertor<Double>(arrayDouble);
-        arrayDouble = invertor2.reverseArray();
+        invertor.reverseArray(arrayDouble);
         System.out.print("\nНаш массив после инвертации: ");
         for (double anArray2 : arrayDouble) {
             System.out.print(" " + anArray2);
         }
         /**
          * Inversion Array of String
-          */
+         */
         System.out.print("\nИсходный массив: ");
         for (String anArray3 : arrayString) {
             System.out.print(" " + anArray3);
         }
-        Invertor<String> invertor3 = new Invertor<String>(arrayString);
-        arrayString = invertor3.reverseArray();
+        invertor.reverseArray(arrayString);
         System.out.print("\nНаш массив после инвертации: ");
         for (String anArray3 : arrayString) {
             System.out.print(" " + anArray3);
         }
+        try {
+            invertor.reverseArray(arrayNull);
+        } catch (NullPointerException e) {
+            System.out.println("\nВместо массива пришла Null ссылка");
+        }
     }
 }
+
 
