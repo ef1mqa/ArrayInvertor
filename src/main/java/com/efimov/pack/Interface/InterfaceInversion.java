@@ -6,7 +6,7 @@ package com.efimov.pack.Interface;
 public interface InterfaceInversion {
     /**
      * Parametric method for reverse array
-     * @return parametric array
+     * @param parametric array
      */
     <T> void reverseArray(final T[] array);
 }

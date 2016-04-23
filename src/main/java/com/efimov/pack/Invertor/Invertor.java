@@ -9,7 +9,6 @@ import com.efimov.pack.Interface.InterfaceInversion;
     /**
      * Default constructor
      *
-     * @param object of type T
      */
     public Invertor() {
     }
@@ -17,7 +16,8 @@ import com.efimov.pack.Interface.InterfaceInversion;
     /**
      * Changing parametric array in the reverse direction
      *
-     * @return reversed array
+     * @param original array for reversed
+     *
      */
     public <T> void reverseArray(final T[] array) {
         T tmp;

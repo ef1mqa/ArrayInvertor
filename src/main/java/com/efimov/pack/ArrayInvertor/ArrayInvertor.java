@@ -1,5 +1,6 @@
 package com.efimov.pack.ArrayInvertor;
 import com.efimov.pack.Invertor.Invertor;
+import com.efimov.pack.printArray.PrintArray;
 
 /**
  * ArrayInvertor class
@@ -8,6 +9,7 @@ import com.efimov.pack.Invertor.Invertor;
 public class ArrayInvertor {
     /**
      * Main class to create an array of variables
+     *
      *
      * @param arg incoming argument
      */
@@ -19,40 +21,29 @@ public class ArrayInvertor {
         /**
          * Inversion Array of integer
          */
+        PrintArray print = new PrintArray();
         System.out.print("\nИсходный массив: ");
-        for (int anArray : arrayInteger) {
-            System.out.print(" " + anArray);
-        }
+        print.printArray(arrayInteger);
         Invertor invertor = new Invertor();
         invertor.reverseArray(arrayInteger);
         System.out.print("\nНаш массив после инвертации: ");
-        for (int anArray : arrayInteger) {
-            System.out.print(" " + anArray);
-        }
+        print.printArray(arrayInteger);
         /**
          * Inversion Array of Double
          */
         System.out.print("\nИсходный массив: ");
-        for (double anArray2 : arrayDouble) {
-            System.out.print(" " + anArray2);
-        }
+        print.printArray(arrayDouble);
         invertor.reverseArray(arrayDouble);
         System.out.print("\nНаш массив после инвертации: ");
-        for (double anArray2 : arrayDouble) {
-            System.out.print(" " + anArray2);
-        }
+        print.printArray(arrayDouble);
         /**
          * Inversion Array of String
          */
         System.out.print("\nИсходный массив: ");
-        for (String anArray3 : arrayString) {
-            System.out.print(" " + anArray3);
-        }
+        print.printArray(arrayString);
         invertor.reverseArray(arrayString);
         System.out.print("\nНаш массив после инвертации: ");
-        for (String anArray3 : arrayString) {
-            System.out.print(" " + anArray3);
-        }
+        print.printArray(arrayString);
         try {
             invertor.reverseArray(arrayNull);
         } catch (NullPointerException e) {
